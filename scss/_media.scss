@@ -1,0 +1,295 @@
+    @media (max-width: 1200px) {
+        .container {
+            max-width: 970px;
+        }
+    }
+    
+    @media (max-width: 992px) {
+        .container {
+            max-width: 750px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .container {
+            max-width: none;
+        }
+    }
+    
+    @media (max-width: 2048px) {}
+    
+    @media (max-width: 1920px) {}
+    
+    @media (max-width: 1800px) {}
+    
+    @media (max-width: 1620px) {}
+    
+    @media (max-width: 1600px) {}
+    
+    @media (max-width: 1536px) {}
+    
+    @media (max-width: 1440px) {}
+    
+    @media (max-width: 1200px) {}
+    
+    @media (max-width: 1080px) {
+        .taste__inner-title::after {
+            display: none;
+        }
+        .taste__inner::after {
+            right: 372px;
+        }
+        .menu__list {
+            display: none;
+        }
+        .header__btn {
+            display: block;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 40px;
+                height: 1px;
+                background-color: $bg;
+                top: -8px;
+                left: 0;
+                z-index: 1;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                width: 40px;
+                height: 1px;
+                background-color: $bg;
+                bottom: -8px;
+                left: 0;
+                z-index: 1;
+            }
+        }
+        .header__btn-row {
+            width: 30px;
+            height: 1px;
+            background-color: $bg;
+            z-index: 1;
+            position: absolute;
+        }
+        .header__btn.active {
+            position: relative;
+            &::before {
+                transform: rotate(45deg);
+                top: -60px;
+                width: 30px;
+                left: -10px;
+                transition: all 0.5s;
+                position: absolute;
+                z-index: 3;
+                background-color: #fff;
+            }
+            &::after {
+                transform: rotate(-45deg);
+                top: -60px;
+                width: 30px;
+                left: -10px;
+                transition: all 0.5s;
+                position: absolute;
+                background-color: #fff;
+                z-index: 3;
+            }
+        }
+        .header__btn.active span {
+            transform: scale(0);
+        }
+        .menu {
+            transition: all 1s;
+            position: fixed;
+            z-index: 1;
+            width: 100%;
+        }
+        .menu__list.active {
+            transition: all 1s;
+            position: relative;
+            min-height: 100vh;
+            width: 130%;
+            left: -72px;
+            top: -119px;
+            display: block;
+            background-color: $bg;
+            margin: 0 auto;
+            height: 100vh;
+            .menu__item {
+                display: block;
+                border: none;
+                position: relative;
+                top: 109px;
+            }
+            a {
+                font-size: 30px;
+                line-height: 36px;
+            }
+            .menu__item+.menu__item {
+                margin-top: 30px;
+            }
+        }
+        .march__inner {
+            flex-wrap: wrap;
+            margin: 0 auto !important;
+            display: block;
+        }
+        .march__content {
+            max-width: 550px;
+            width: 100%;
+        }
+        .march__list {
+            margin-bottom: 20px;
+        }
+    }
+    
+    @media (max-width: 1024px) {}
+    
+    @media (max-width: 960px) {
+        .taste__inner::after {
+            right: 292px;
+        }
+        .form__inner {
+            &::before,
+            &::after {
+                width: 100px;
+                height: 100px;
+            }
+            &::after {
+                top: 6px;
+            }
+        }
+    }
+    
+    @media (max-width: 900px) {
+        .footer__bottom {
+            margin-top: 30px;
+        }
+        .footer__inner-list {
+            flex-direction: column;
+            display: none;
+            border: none;
+        }
+        .footer__inner-list.active {
+            display: block;
+            text-align: left;
+        }
+        .footer__inner-list li.active {
+            padding: 10px;
+        }
+        .footer__bottom span.active {
+            position: relative;
+            transition: all 0.3s;
+        }
+    }
+    
+    @media (max-width: 864px) {}
+    
+    @media (max-width: 800px) {}
+    
+    @media (max-width: 720px) {
+        .taste__inner::after {
+            right: 250px;
+        }
+    }
+    
+    @media (max-width: 640px) {}
+    
+    @media (max-width: 600px) {}
+    
+    @media (max-width: 540px) {
+        .march__subtitle {
+            margin-bottom: 20px;
+        }
+        .march__title {
+            margin-bottom: 30px;
+        }
+        .march-pic-first {
+            display: none;
+        }
+        .march__findout {
+            display: block;
+            margin: 0 auto 20px;
+            text-align: center;
+        }
+        .march__pic {
+            text-align: center;
+        }
+        .march__picture {
+            margin-left: 0;
+        }
+        .footer__list {
+            flex-direction: column;
+            display: none;
+        }
+        .footer__list.active {
+            display: block;
+        }
+        .footer__top span.active {
+            position: relative;
+            transition: all 0.3s;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .wine__list,
+        .wine__trial {
+            padding: 15px 5px;
+            font-size: 14px;
+            line-height: 17px;
+        }
+        .taste__inner-title {
+            font-size: 24px;
+            line-height: 30px;
+            @include f500;
+        }
+        .taste__inner::after {
+            right: 100px;
+        }
+        .march__title {
+            font-size: 24px;
+            line-height: 30px;
+        }
+        .march__desc {
+            font-size: 1;
+        }
+        .march__item {
+            padding: 3px 5px;
+            font-size: 12px;
+            line-height: 16px;
+            span {
+                padding: 3px 5px;
+                font-size: 10px;
+                line-height: 16px;
+            }
+        }
+        .form__title {
+            font-size: 24px;
+            line-height: 30px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        form {
+            .form__inner {
+                text-align: left;
+                padding-left: 10px;
+            }
+            label {
+                input+input {
+                    margin-left: 0 !important;
+                }
+            }
+            button {
+                width: 150px !important;
+            }
+        }
+    }
+    
+    @media (max-width: 360px) {
+        .taste__inner::after {
+            right: 60px;
+        }
+    }
+    
+    @media (max-width: 320px) {}
